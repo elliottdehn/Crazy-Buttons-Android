@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">TheButtons</string>
+    <string name="action_increase">+</string>
+</resources>
