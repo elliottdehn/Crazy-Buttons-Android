@@ -1,10 +1,12 @@
 package android.apps.elliott.thebuttons;
 
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -23,8 +25,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         Button increment = (Button) findViewById(R.id.button_increment);
         Button decrement = (Button) findViewById(R.id.button_decrement);
@@ -40,7 +44,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .build();
 
         api = retrofit.create(API.class);
-
     }
 
     @Override
@@ -54,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button_neutralize:
                 neutralizeNextCommand();
+                
                 break;
         }
     }

@@ -3,4 +3,16 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="button_plus_primary">#F3150A</color>
+    <color name="button_plus_secondary">#F3150A</color>
+    <color name="button_plus_text">#FFFFFF</color>
+
+    <color name="button_neutral_primary">#FBD208</color>
+    <color name="button_neutral_secondary">#FBD208</color>
+    <color name="button_neutral_text">#FFFFFF</color>
+
+    <color name="button_minus_primary">#0677EE</color>
+    <color name="button_minus_secondary">#0677EE</color>
+    <color name="button_minus_text">#FFFFFF</color>
 </resources>
