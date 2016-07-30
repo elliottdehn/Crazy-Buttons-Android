@@ -19,7 +19,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener, Callback<ResponseBody> {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener, Callback<ButtonResponse> {
 
     private API api;
     @Override
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.button_neutralize:
                 neutralizeNextCommand();
-                
+
                 break;
         }
     }
@@ -84,13 +84,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * @param response
      */
     @Override
-    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
+    public void onResponse(Call<ButtonResponse> call, Response<ButtonResponse> response) {
         TextView counter = (TextView) findViewById(R.id.text_counter);
-        try {
-            counter.setText(response.body().string());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        counter.setText(response.body().count());
         Log.d("Debug", "Incremented");
     }
 
@@ -102,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * @param t
      */
     @Override
-    public void onFailure(Call<ResponseBody> call, Throwable t) {
+    public void onFailure(Call<ButtonResponse> call, Throwable t) {
         Log.e("Debug", "Error: ", t);
     }
 }

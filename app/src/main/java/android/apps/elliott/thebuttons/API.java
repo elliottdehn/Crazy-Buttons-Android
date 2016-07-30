@@ -13,14 +13,14 @@ public interface API {
     public static final String BASE_URL = "https://crazybuttons.herokuapp.com/";
 
     @GET
-    Call<ResponseBody> getCount();
+    Call<ButtonResponse> getCount();
 
     @POST("plus")
-    Call<ResponseBody> increment();
+    Call<ButtonResponse> increment();
 
     @POST("minus")
-    Call<ResponseBody> decrement();
+    Call<ButtonResponse> decrement();
 
     @POST("neutral")
-    Call<ResponseBody> neutralize();
+    Call<ButtonResponse> neutralize();
 }
