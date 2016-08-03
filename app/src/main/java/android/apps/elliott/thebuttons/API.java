@@ -12,7 +12,7 @@ public interface API {
 
     public static final String BASE_URL = "https://crazybuttons.herokuapp.com/";
 
-    @GET
+    @GET("/")
     Call<ButtonResponse> getCount();
 
     @POST("plus")

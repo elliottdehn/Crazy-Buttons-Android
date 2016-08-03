@@ -9,38 +9,31 @@
     <Button
         android:id="@+id/button_increment"
         android:background="@drawable/background_button_plus"
-        android:textColor="@color/button_plus_text"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="40"
         android:text="@string/action_increase"
-        android:textSize="80sp"
+        android:textSize="@dimen/button_text"
         android:textStyle="bold" />
     <Button
         android:id="@+id/button_neutralize"
         android:background="@drawable/background_button_neutral"
-        android:textColor="@color/button_neutral_text"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="40"
-        android:textSize="80sp"
+        android:textSize="@dimen/button_text"
         android:textStyle="bold" />
     <Button
         android:id="@+id/button_decrement"
         android:background="@drawable/background_button_minus"
-        android:textColor="@color/button_minus_text"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:text="-"
         android:layout_height="0dp"
         android:layout_weight="40"
-        android:textSize="80sp"
+        android:textSize="@dimen/button_text"
         android:textStyle="bold" />
-    <TextView
-        android:id="@+id/text_counter"
-        android:textAlignment="center"
-        android:textSize="25sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
 
 </LinearLayout>
